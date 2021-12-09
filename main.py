@@ -2,8 +2,6 @@ import os
 import requests
 from urllib.parse import urlparse
 from dotenv import load_dotenv
-load_dotenv()
-
 import argparse
 
 
@@ -41,6 +39,7 @@ def is_bitlink(token, url):
     return response.ok
 
 def main():
+    load_dotenv()
     parser = argparse.ArgumentParser(
         description='Скрипт либо создаёт короткие ссылки, либо показывает количество переходов по такой ссылке'
     )
